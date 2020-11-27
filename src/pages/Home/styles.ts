@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
@@ -8,6 +8,24 @@ export const Container = styled.div`
     'header   header    header'
     'sidenav  content   ads'
     'footer   footer    footer';
+
+  @media (max-width: 1200px) {
+    grid-template-areas:
+      'header   header  header'
+      'sidenav  content content'
+      'sidenav  ads     ads'
+      'footer   footer  footer';
+  }
+
+  @media (max-width: 760px) {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      'header'
+      'sidenav'
+      'content'
+      'ads'
+      'footer';
+  }
 `;
 
 export const Header = styled.header`
@@ -22,10 +40,18 @@ export const Header = styled.header`
   img {
     max-width: 200px;
   }
+
+  @media (max-width: 760px) {
+    grid-template-columns: auto;
+  }
 `;
 
 export const Logo = styled(Link)`
   max-width: 200px;
+
+  @media (max-width: 760px) {
+    margin-bottom: 20px;
+  }
 `;
 
 export const ButtonsContainer = styled.ul`
@@ -34,6 +60,10 @@ export const ButtonsContainer = styled.ul`
 
   li + li {
     margin-left: 30px;
+
+    @media (max-width: 760px) {
+      margin-left: 10px;
+    }
   }
 `;
 
@@ -49,12 +79,48 @@ export const MenuButtons = styled(Link)`
   &:hover {
     background: rgba(0, 0, 0, 0.5);
   }
+
+  @media (max-width: 760px) {
+    font-size: 1em;
+  }
+`;
+
+const leftRightArrow = keyframes`
+  from {
+    right: 30px;
+  }
+  to {
+    right: 20px;
+  }
 `;
 
 export const Sidenav = styled.nav`
   grid-area: sidenav;
   background: #fafbfc;
   padding: 30px;
+
+  @media (max-width: 760px) {
+    position: relative;
+    overflow-x: auto;
+    padding: 0 30px;
+
+    &:after {
+      content: '→';
+      position: absolute;
+      top: 5px;
+      right: 30px;
+      color: rgba(0, 0, 0 0.3);
+      animation: ${leftRightArrow} 0.5s ease-in 0s infinite alternate;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        flex: 1 0 60px;
+      }
+    }
+  }
 `;
 
 export const IconsButton = styled(Link)`
@@ -70,6 +136,10 @@ export const IconsButton = styled(Link)`
 
   &:hover {
     background: #b07dfb;
+  }
+
+  @media (max-width: 760px) {
+    margin: 30px 30px 30px 0;
   }
 `;
 
@@ -88,6 +158,10 @@ export const Content = styled.main`
     line-height: 1.6;
     letter-spacing: -0.005em;
     color: rgba(0, 0, 0, 0.7);
+  }
+
+  img {
+    width: 100%;
   }
 `;
 

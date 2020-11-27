@@ -42,7 +42,7 @@ const Home = () => {
       </S.Header>
 
       <S.Sidenav>
-        <u>
+        <ul>
           <li>
             <S.IconsButton to="/">
               <img src={cervo} alt="Cervo" />
@@ -73,7 +73,7 @@ const Home = () => {
               <img src={abelha} alt="Abelha" />
             </S.IconsButton>
           </li>
-        </u>
+        </ul>
       </S.Sidenav>
 
       <S.Content>
@@ -179,7 +179,7 @@ const Home = () => {
       </S.Aside>
 
       <S.Footer>
-        <p>Origamid © 2012 - 2017. Alguns direitos reservados.</p>
+        <p>AnddersonRds © 2020. Todos os direitos reservados.</p>
       </S.Footer>
     </S.Container>
   );

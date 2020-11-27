@@ -18,4 +18,10 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
   }
+
+  img {
+    display: block;
+    max-width: 100%;
+    border-radius: 5px;
+  }
 `;

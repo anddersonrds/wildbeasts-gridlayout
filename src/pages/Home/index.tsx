@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import wildbeast from '../../assets/images/wildbeast.svg';
 
@@ -78,37 +77,42 @@ const Home = () => {
       </S.Sidenav>
 
       <S.Content>
-        <div>
+        <S.Title>
           <h1>Lobo Cinza</h1>
           <span>da família canis lupus</span>
-        </div>
+        </S.Title>
 
-        <div>
+        <S.Features>
           <div>
-            <span>72</span>
+            <strong>72</strong>
             <span>kg</span>
           </div>
-
           <div>
-            <span>13</span>
+            <strong>13</strong>
             <span>age</span>
           </div>
-        </div>
+        </S.Features>
 
         <S.ColWide>
-          É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior,
-          cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e estudos
-          genéticos reafirmam que o lobo cinzento é ancestral do cão doméstico.
+          <p>
+            É um sobrevivente da Era do Gelo, originário do Pleistoceno
+            Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e
+            estudos genéticos reafirmam que o lobo cinzento é ancestral do cão
+            doméstico.
+          </p>
         </S.ColWide>
 
-        <img src={wolf1} alt="Wolf 1" />
+        <S.ImgWolf src={wolf1} alt="Wolf 1" />
 
-        <p>
-          É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior,
-          cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e estudos.
-        </p>
+        <S.Subtitle>
+          <p>
+            É um sobrevivente da Era do Gelo, originário do Pleistoceno
+            Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e
+            estudos.
+          </p>
+        </S.Subtitle>
 
-        <img src={wolf2} alt="Wolf 2" />
+        <S.ImgWolf2 src={wolf2} alt="Wolf 2" />
 
         <p>
           O peso e tamanho dos lobos variam muito em todo o mundo, tendendo a
@@ -124,39 +128,44 @@ const Home = () => {
           Alasca, Canadá,[8] e na antiga União Soviética.
         </p>
 
-        <blockquote>
-          <S.ColWide>
-            “Há algo no uivar do lobo que tira um homem do aqui e agora e o
-            transporta para uma floresta da mente.”
-          </S.ColWide>
-        </blockquote>
+        <S.ColWide>
+          <S.PurpleBlock>
+            <p>
+              “Há algo no uivar do lobo que tira um homem do aqui e agora e o
+              transporta para uma floresta da mente.”
+            </p>
+          </S.PurpleBlock>
+        </S.ColWide>
 
-        <ul>
-          <li>Surgiu: 12.000 anos</li>
-          <li>Tipo: Mamífero</li>
-          <li>Idade Média: 13 anos</li>
-          <li>Macho adulto: 80kg</li>
-          <li>Fêmea adulta: 55kg</li>
-          <li>Família: Lupus</li>
-        </ul>
+        <S.PurpleBlock>
+          <ul>
+            <li>Surgiu: 12.000 anos</li>
+            <li>Tipo: Mamífero</li>
+            <li>Idade Média: 13 anos</li>
+            <li>Macho adulto: 80kg</li>
+            <li>Fêmea adulta: 55kg</li>
+            <li>Família: Lupus</li>
+          </ul>
+        </S.PurpleBlock>
 
-        <div>
+        <S.Information>
           <p>
             É um sobrevivente da Era do Gelo, originário do Pleistoceno
             Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e
             estudos genéticos reafirmam que o lobo cinzento é ancestral do cão
             doméstico.
           </p>
-
           <p>
             É um sobrevivente da Era do Gelo, originário do Pleistoceno
             Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e
             estudos genéticos reafirmam que o lobo cinzento é ancestral do cão
             doméstico.
           </p>
-        </div>
+        </S.Information>
 
-        <img src={wolf3} alt="Wolf 3" />
+        <S.ColWide>
+          <img src={wolf3} alt="Wolf 3" />
+        </S.ColWide>
       </S.Content>
 
       <S.Aside>

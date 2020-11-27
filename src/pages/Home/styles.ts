@@ -82,10 +82,118 @@ export const Content = styled.main`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    color: rgba(0, 0, 0, 0.7);
+  }
 `;
 
-export const ColWide = styled.p`
+export const Subtitle = styled.div`
+  > p {
+    font-size: 0.875em;
+    max-width: 16em;
+    color: #b07dfb;
+  }
+`;
+
+export const Title = styled.div`
+  color: #b07dfb;
+
+  h1 {
+    font-size: 3.75em;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  span {
+    font-size: 0.875em;
+    font-style: italic;
+  }
+`;
+
+export const Features = styled.div`
+  display: flex;
+  align-items: flex-start;
+
+  > div {
+    position: relative;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    color: #b07dfb;
+
+    & + div {
+      margin-left: 30px;
+    }
+
+    strong {
+      font-size: 3em;
+      line-height: 1;
+      margin: 10px auto;
+      display: block;
+    }
+
+    span {
+      display: block;
+      background: white;
+      border-radius: 0 0 5px 5px;
+      padding: 5px 0;
+      position: relative;
+      top: 2px;
+    }
+  }
+`;
+
+export const PurpleBlock = styled.div`
+  align-self: start;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  color: white;
+
+  p {
+    max-width: 500px;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+  }
+
+  li {
+    font-family: Courier, monospace;
+    font-size: 1.125em;
+    padding: 15px;
+
+    & + li {
+      border-top: 2px solid #b07dfb;
+    }
+  }
+`;
+
+export const ColWide = styled.div`
   grid-column: 1 / -1;
+`;
+
+export const ImgWolf = styled.img`
+  grid-row: span 2;
+  align-self: end;
+`;
+
+export const ImgWolf2 = styled.img`
+  align-self: end;
+`;
+
+export const Information = styled.div`
+  p + p {
+    margin-top: 30px;
+  }
 `;
 
 export const Aside = styled.nav`
